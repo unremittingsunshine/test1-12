@@ -1,0 +1,25 @@
+#include <opencv2/opencv.hpp>
+using namespace cv;
+int main()
+{
+	Mat img1 = imread("E:\\Junior courseware\\Graduation design\\test picture\\test1.jpg");
+	Mat img2 = imread("E:\\Junior courseware\\Graduation design\\test picture\\test2.jpg");
+	cvtColor(img1, img1, COLOR_BGR2GRAY);
+	cvtColor(img2, img2, COLOR_BGR2GRAY);
+	//imshow("test", img1);
+	//调整显示窗口大小
+	//int down_width = 900;
+	//int down_height = 600;
+	//Mat resized_down;
+	////resize down
+	//resize(img1, resized_down, Size(down_width, down_height), INTER_LINEAR);
+	//imshow("test1", resized_down);
+	//resize(img2, resized_down, Size(down_width, down_height), INTER_LINEAR);
+	//imshow("test2", resized_down);
+	//imshow("test1", img1);
+	cv2.namedWindow("要跟imshow的窗口同名", cv2.WINDOW_KEEPRATIO);
+	cv2.imshow('跟上面的要同名', img);
+	waitKey(20000);
+	destroyAllWindows();
+	return 0;
+}
